@@ -19,6 +19,10 @@ import {
   expenseFormSchema,
 } from "@/components/expenses/ExpenseForm";
 import {
+  ExpenseInsight,
+  expenseInsightSchema,
+} from "@/components/expenses/ExpenseInsight";
+import {
   ExpenseTable,
   expenseTableSchema,
 } from "@/components/expenses/ExpenseTable";
@@ -96,6 +100,13 @@ export const tools: TamboTool[] = [
  * can be controlled by AI to dynamically render UI elements based on user interactions.
  */
 export const components: TamboComponent[] = [
+  {
+    name: "ExpenseInsight",
+    description:
+      "A card component to display AI-generated insights, analysis, or recommendations about the user's spending. Use this when asked to analyze expenses or when you identify a spending pattern or issue.",
+    component: ExpenseInsight,
+    propsSchema: expenseInsightSchema,
+  },
   {
     name: "Graph",
     description:
